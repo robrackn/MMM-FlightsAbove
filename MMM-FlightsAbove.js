@@ -141,6 +141,9 @@ Module.register('MMM-FlightsAbove',{
             kn2km: function(cell, formatterParams) {              // Knots to Kilometers
                 return  (1.852*cell.getValue()).toFixed(0);
             },
+            kn2mph: function(cell, formatterParams) {              // Knots to miles per hour
+                return  (1.15078*cell.getValue()).toFixed(0);
+            },
             ep2time: function(cell, formatterParams) {            // POSIX epoch to hh:mm:ss
                 let date = new Date(cell.getValue());
                 // We use "en-GB" only to get the correct formatting for a 24 hr clock, not your TZ.
